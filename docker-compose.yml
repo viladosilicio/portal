@@ -15,6 +15,7 @@ services:
       volumes:
         - "./wordpress:/var/www/html"
         - "./plugins:/var/www/html/wp-content/plugins"
+        - ./upload.ini:/usr/local/etc/php/conf.d/uploads.ini
 
   db:
       container_name: 'local-wordpress-db'
